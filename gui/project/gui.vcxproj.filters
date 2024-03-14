@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="kernel">
+      <UniqueIdentifier>{0976469f-4d47-4e8c-ac58-86ce27b4cc6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{9fd16cc7-e831-42bb-997f-d74f8bffc795}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{06a657ee-31f9-40e3-867d-a754f7e1dd99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{a4372ef0-59bc-4a4e-8573-eac9ba1c917d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\kernel\main.cpp">
+      <Filter>kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\widget_base.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\app_main.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\list_model.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\list_item_delegate.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="..\resource\default.qrc">
+      <Filter>resource</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\base\widget_base.h">
+      <Filter>base</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\app_main.h">
+      <Filter>ui</Filter>
+    </QtMoc>
+    <QtMoc Include="..\base\list_model.h">
+      <Filter>base</Filter>
+    </QtMoc>
+    <QtMoc Include="..\base\list_item_delegate.h">
+      <Filter>base</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\ui\AppMain.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>
