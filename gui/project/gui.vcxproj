@@ -115,9 +115,18 @@
   <ItemGroup>
     <QtRcc Include="..\resource\default.qrc">
       <ExecutionDescription Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">rcc %(Identity)</ExecutionDescription>
-      <NoCompression Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</NoCompression>
-      <BinaryOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</BinaryOutput>
-      <QtRccFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">qrc_%(Filename).cpp</QtRccFileName>
+      <NoCompression Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</NoCompression>
+      <BinaryOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BinaryOutput>
+      <QtRccFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).rcc</QtRccFileName>
+      <NoCompression Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</NoCompression>
+      <BinaryOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BinaryOutput>
+      <Compression Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">default</Compression>
+      <QtRccFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).rcc</QtRccFileName>
+      <Compression Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">default</Compression>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DynamicSource>
+      <QtRccDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\product\debug\skin\</QtRccDir>
+      <QtRccDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\product\release\skin</QtRccDir>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DynamicSource>
     </QtRcc>
   </ItemGroup>
   <ItemGroup>

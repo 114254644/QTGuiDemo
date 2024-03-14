@@ -15,6 +15,7 @@ CWidgetBase::CWidgetBase(QWidget* parent, WidgetFlags flags)
 {
 	setWindowFlags(Qt::FramelessWindowHint);
 	m_lab_title = new QLabel(this);
+	m_lab_title->setObjectName("lab_title");
 	if (m_flags & WT_RoundMaskHint)
 		setAttribute(Qt::WA_TranslucentBackground);
 	
@@ -22,7 +23,6 @@ CWidgetBase::CWidgetBase(QWidget* parent, WidgetFlags flags)
 	{
 		m_btn_min = new QToolButton(this);
 		m_btn_min->setObjectName("btn_min");
-		m_btn_min->setToolTip("btn_min");
 		m_btn_min->hide();
 
 		auto min__ = [this]()->void
@@ -36,7 +36,6 @@ CWidgetBase::CWidgetBase(QWidget* parent, WidgetFlags flags)
 	{
 		m_btn_close = new QToolButton(this);
 		m_btn_close->setObjectName("btn_close");
-		m_btn_close->setToolTip("btn_close");
 		m_btn_close->hide();
 	
 		connect(m_btn_close, SIGNAL(clicked()), this, SIGNAL(closed()));
@@ -46,26 +45,26 @@ CWidgetBase::CWidgetBase(QWidget* parent, WidgetFlags flags)
 	{
 		m_btn_max = new QToolButton(this);
 		m_btn_max->setObjectName("btn_max");
-		m_btn_max->setToolTip("btn_max");
 		m_btn_max->hide();
 
 		auto max__ = [this]()->void
 		{
-			showMaximized();
 			m_btn_max->hide();
 			m_btn_restore->show();
+			showMaximized();
+		
 		};
 		connect(m_btn_max, &QToolButton::clicked, this, max__);
 		m_btn_restore = new QToolButton(this);
 		m_btn_restore->setObjectName("btn_restore");
-		m_btn_restore->setToolTip("btn_restore");
 		m_btn_restore->hide();
 
 		auto restore__ = [this]()->void
 		{
-			showNormal();
 			m_btn_restore->hide();
 			m_btn_max->show();
+			showNormal();
+		
 		};
 		connect(m_btn_restore, &QToolButton::clicked, this, restore__);
 	}
@@ -194,19 +193,21 @@ bool CWidgetBase::nativeEvent(const QByteArray& eventType, void* message, long* 
 		{
 			if (windowState() & Qt::WindowMaximized)
 			{
-				showNormal();
 				if (m_btn_max != nullptr)
 					m_btn_max->show();
 				if (m_btn_restore != nullptr)
 					m_btn_restore->hide();
+				showNormal();
+	
 			}
 			else
 			{
-				showMaximized();
 				if (m_btn_max != nullptr)
 					m_btn_max->hide();
 				if (m_btn_restore != nullptr)
 					m_btn_restore->show();
+				showMaximized();
+		
 			}
 			return true;
 		}

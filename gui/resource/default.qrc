@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/img">
+    <qresource prefix="/skin">
         <file>img/wnd_close.png</file>
         <file>img/wnd_max.png</file>
         <file>img/wnd_min.png</file>
@@ -7,4 +7,7 @@
         <file>img/wnd_restore.png</file>
         <file>img/logo.png</file>
     </qresource>
+	<qresource prefix="/qss">
+	   <file>default.qss</file>
+	</qresource>
 </RCC>

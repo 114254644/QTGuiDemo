@@ -1,0 +1,74 @@
+QToolButton#btn_close
+{
+	min-width: 29;
+	min-height: 29;
+	border-image:url(:/skin/img/wnd_close.png) 0 58 0 0;
+}
+
+QToolButton#btn_close:hover
+{
+	border-image:url(:/skin/img/wnd_close.png) 0 29 0 29;
+}
+
+QToolButton#btn_close:pressed
+{
+	border-image:url(:/skin/img/wnd_close.png) 0 0 0 58;
+}
+
+QToolButton#btn_max
+{
+	min-width: 29;
+	min-height: 29;
+	border-image:url(:/skin/img/wnd_max.png) 0 58 0 0;
+}
+
+QToolButton#btn_max:hover
+{
+	border-image:url(:/skin/img/wnd_max.png) 0 29 0 29;
+}
+
+QToolButton#btn_max:pressed
+{
+	border-image:url(:/skin/img/wnd_max.png) 0 0 0 58;
+}
+
+QToolButton#btn_restore
+{
+	min-width: 29;
+	min-height: 29;
+	border-image:url(:/skin/img/wnd_restore.png) 0 58 0 0;
+}
+
+QToolButton#btn_restore:hover
+{
+	border-image:url(:/skin/img/wnd_restore.png) 0 29 0 29;
+}
+
+QToolButton#btn_restore:pressed
+{
+	border-image:url(:/skin/img/wnd_restore.png) 0 0 0 58;
+}
+
+QToolButton#btn_min
+{
+	min-width: 29;
+	min-height: 29;
+	border-image:url(:/skin/img/wnd_min.png) 0 58 0 0;
+}
+
+QToolButton#btn_min:hover
+{
+	border-image:url(:/skin/img/wnd_min.png) 0 29 0 29;
+}
+
+QToolButton#btn_min:pressed
+{
+	border-image:url(:/skin/img/wnd_min.png) 0 0 0 58;
+}
+
+
+QLabel#lab_title
+{
+	font: 75 12pt "微软雅黑";
+	color: rgb(255, 255, 255);
+}
